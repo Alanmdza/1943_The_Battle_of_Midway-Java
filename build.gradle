@@ -1,0 +1,23 @@
+plugins {
+	id "java"
+	id "application"
+}
+
+version = '1.0.0'
+//mainClassName = 'juego0.core.J1943'
+
+application {
+    // Otras configuraciones de la aplicación
+    mainClassName = 'launcher.Ventana'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'    
+        implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+
+}
