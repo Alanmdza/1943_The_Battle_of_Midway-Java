@@ -69,7 +69,7 @@ public class J1943 extends Juego {
             e.printStackTrace();
         }
 
-        MUSICA = tablaHash.get(jsonObject.get("Activar y Desactivar música de fondo"));
+        MUSICA = tablaHash.get(jsonObject.get("Activar y Desactivar musica de fondo"));
         EFECTOSDESONIDO = tablaHash.get(jsonObject.get("Activar y Desactivar efectos de sonido"));
         SONIDOG[0] = ((String) (jsonObject.get("Sonido General"))).contains("Activado");
         SONIDOE[0] = ((String) (jsonObject.get("Efectos de sonido"))).contains("Activado");
@@ -174,7 +174,7 @@ public class J1943 extends Juego {
         highscore.display(g);
         if (jugador.getPuntuacion() != ultimoPuntaje) {
             int[] digitos = separarEnDigitos(jugador.getPuntuacion());
-            // Imprimir los dígitos separados
+            // Imprimir los digitos separados
             for (int i = 0; i < 6; i++) {
                 Puntos[i].setImagen("images/1984/Numeros/" + digitos[i] + ".png");
             }
@@ -189,7 +189,7 @@ public class J1943 extends Juego {
 
     public static int[] separarEnDigitos(long numero) {
         int[] digitos = new int[6];
-        long divisor = 100000; // 10 elevado a la quinta potencia (6 dígitos)
+        long divisor = 100000; // 10 elevado a la quinta potencia (6 digitos)
 
         for (int i = 0; i < 6; i++) {
             digitos[i] = (int) (numero / divisor);
@@ -235,9 +235,9 @@ public class J1943 extends Juego {
         if (redondeado >= 20)
             barra.display(g);
         E.display(g);
-        int digito1 = numero / 100; // El primer dígito
-        int digito2 = (numero % 100) / 10; // El segundo dígito
-        int digito3 = numero % 10; // El tercer dígito
+        int digito1 = numero / 100; // El primer digito
+        int digito2 = (numero % 100) / 10; // El segundo digito
+        int digito3 = numero % 10; // El tercer digito
         E1.setImagen("images/1984/Numeros/" + digito1 + ".png");
         E1.display(g);
         E2.setImagen("images/1984/Numeros/" + digito2 + ".png");
@@ -309,29 +309,29 @@ public class J1943 extends Juego {
         } else {
             if (objeto instanceof Enemigo) {
                 for (Refuerzo refuerzo : p38.getRefuerzos()) {
-                    if ((intersección(refuerzo, objeto)))
+                    if ((interseccion(refuerzo, objeto)))
                         colisionar(refuerzo, (Enemigo) objeto);
                 }
-                if ((intersección(p38, objeto)))
+                if ((interseccion(p38, objeto)))
                     colisionar((P38) p38, (Enemigo) objeto);
             } else {
                 if (objeto instanceof DisparoEnemigo) {
                     for (Refuerzo refuerzo : p38.getRefuerzos()) {
-                        if ((intersección(refuerzo, objeto)))
+                        if ((interseccion(refuerzo, objeto)))
                             colisionar(refuerzo, (DisparoEnemigo) objeto);
                     }
                 }
-                if ((((objeto instanceof DisparoEnemigo)) || (objeto instanceof Hiteable)) && intersección(objeto, p38))
+                if ((((objeto instanceof DisparoEnemigo)) || (objeto instanceof Hiteable)) && interseccion(objeto, p38))
                     colisionar(p38, objeto);
                 else {
                     if ((objeto instanceof Disparo) && (!(objeto instanceof DisparoEnemigo))) {
                         for (ObjetoGrafico objeto2 : objetosGraficos) {
-                            if ((intersección(objeto, objeto2)) && (objeto2 instanceof Hiteable)) {
+                            if ((interseccion(objeto, objeto2)) && (objeto2 instanceof Hiteable)) {
                                 colisionar((Disparo) objeto, (Hiteable) objeto2);
 
                             }
 
-                            if ((intersección(objeto, objeto2)) && (objeto2 instanceof DisparoEnemigo)
+                            if ((interseccion(objeto, objeto2)) && (objeto2 instanceof DisparoEnemigo)
                                     && (objeto instanceof DisparoEscopeta)) {
                                 objeto.setBorrar();
                                 objeto2.setBorrar();
@@ -414,7 +414,7 @@ public class J1943 extends Juego {
         pendientesGraficos.clear();
     }
 
-    private static boolean intersección(ObjetoGrafico a, ObjetoGrafico b) {
+    private static boolean interseccion(ObjetoGrafico a, ObjetoGrafico b) {
         double ax = a.getX();
         double ay = a.getY();
         double aw = a.getWidth();
@@ -433,7 +433,7 @@ public class J1943 extends Juego {
                 (bh < by || bh > ay));
     }
 
-    private static boolean intersección(Tsunami tsunami, ObjetoGrafico b) {
+    private static boolean interseccion(Tsunami tsunami, ObjetoGrafico b) {
         return ((b.getX() > tsunami.getX() + tsunami.desplazamiento() + 600)
                 && (b.getY() > 1000 + tsunami.desplazamiento()));
     }
@@ -538,11 +538,11 @@ public class J1943 extends Juego {
                     for (Torreta torreta : nivelactual.getJefe().getTorretas()) {
                         for (ObjetoGrafico objetoGrafico : objetosGraficos) {
                             if ((objetoGrafico instanceof Disparo) && (!(objetoGrafico instanceof DisparoEnemigo))
-                                    && (intersección(torreta, objetoGrafico))) {
+                                    && (interseccion(torreta, objetoGrafico))) {
                                 colisionar((Disparo) objetoGrafico, torreta);
                                 explosiones.add(new Explosion(torreta.getX(), torreta.getY()));
                             } else if (objetoGrafico instanceof Tsunami) {
-                                if (intersección((Tsunami) objetoGrafico, torreta)
+                                if (interseccion((Tsunami) objetoGrafico, torreta)
                                         && !(((Tsunami) objetoGrafico).getAfectados().contains(torreta))) {
                                     torreta.recibirDanio(10);
                                     ((Tsunami) objetoGrafico).getAfectados().add(torreta);
@@ -554,7 +554,7 @@ public class J1943 extends Juego {
                         }
                     }
                 }
-                break;// caso normal, en ejecución
+                break;// caso normal, en ejecucion
             case -1:// cerrar el juego
                 track.pause();
                 stop();
@@ -570,18 +570,18 @@ public class J1943 extends Juego {
                 nivelactual = new GameOver(keyboard, pendientesGraficos);
                 nivelactual.start();
                 break;
-            case 2:// Avanzó de nivel
+            case 2:// Avanzo de nivel
                 clear();
                 indexNivel++;
                 inicializarNivel(indexNivel);
                 nivelactual.start();
                 break;
-            case 3:// Retomó el nivel
+            case 3:// Retomo el nivel
                 clear();
                 inicializarNivel(indexNivel);
                 nivelactual.start();
                 break;
-            case 4:// Pasó a la segunda fase
+            case 4:// Paso a la segunda fase
                 clear();
                 track.pause();
                 if (nivelactual instanceof Nivel1)
@@ -595,7 +595,7 @@ public class J1943 extends Juego {
                 nivelactual.getFondo().setY(-nivelactual.getFondo().getHeight() + 810);
                 nivelactual.setEstado(1);
                 break;
-            case 5:// Se acabo el tiempo de la misión
+            case 5:// Se acabo el tiempo de la mision
                 if (nivelactual.getJefe().getDanioAcumulado() > 0.7) {
                     nivelactual.setEstado(2);
                 } else
@@ -640,11 +640,11 @@ public class J1943 extends Juego {
                 puntuaciones = new ArrayList<>();
             }
 
-            // Agregar el nuevo nombre y puntuación
+            // Agregar el nuevo nombre y puntuacion
             Map.Entry<String, Long> nuevaPuntuacion = new AbstractMap.SimpleEntry<>(nombre, puntuacion);
             puntuaciones.add(nuevaPuntuacion);
 
-            // Ordenar las puntuaciones por la puntuación en orden descendente
+            // Ordenar las puntuaciones por la puntuacion en orden descendente
             puntuaciones.sort((a, b) -> Long.compare(b.getValue(), a.getValue()));
 
             // Escribir la estructura de datos ordenada en el archivo JSON

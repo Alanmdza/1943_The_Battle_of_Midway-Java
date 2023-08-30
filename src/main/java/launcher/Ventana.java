@@ -10,7 +10,7 @@ public class Ventana extends JFrame {
 
     static void iniciar() {
         Ventana ventana = new Ventana();
-        ventana.setTitle("Selección de juego");
+        ventana.setTitle("Seleccion de juego");
         ImageIcon im = new ImageIcon("src/main/resources/images/launcher/icono.png");
         ventana.setIconImage(im.getImage());
         ventana.setLayout(new BorderLayout());

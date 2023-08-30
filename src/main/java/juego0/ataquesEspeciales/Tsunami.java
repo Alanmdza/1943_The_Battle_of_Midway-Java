@@ -31,14 +31,14 @@ public class Tsunami extends AtaqueEspecial {
             if (objeto instanceof Enemigo) {
                 Enemigo enemigo = (Enemigo) objeto;
                 if (enemigo.getChico() && !afectados.contains(enemigo)
-                        && intersección(this, enemigo)) {
+                        && interseccion(this, enemigo)) {
                     afectados.add(enemigo);
                     enemigo.recibirDanio(10);
                 }
             }
         }
     }
-    public static boolean intersección(ObjetoGrafico a, ObjetoGrafico b) {
+    public static boolean interseccion(ObjetoGrafico a, ObjetoGrafico b) {
         double ax = a.getX();
         double ay = a.getY();
         double aw = a.getWidth();

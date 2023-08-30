@@ -48,7 +48,7 @@ public class Panelcenter extends JPanel implements ActionListener {
             ImageIcon scaledImageIcon = new ImageIcon(image);
             centro.add(new JLabel(scaledImageIcon));
             boton1[i] = new JButton("Jugar");
-            boton2[i] = new JButton("Configuración");
+            boton2[i] = new JButton("Configuracion");
             boton1[i].setAlignmentX(Component.CENTER_ALIGNMENT);
             boton1[i].setAlignmentY(Component.CENTER_ALIGNMENT);
             boton1[i].setBackground(new Color((34), (34), (34)));
@@ -82,7 +82,7 @@ public class Panelcenter extends JPanel implements ActionListener {
             }
             if (evt.getSource().equals(boton2[0])) {
                 Menu1943 men = new Menu1943();
-                JDialog d = new JDialog(Ventana.ventana, "Configuración", true);
+                JDialog d = new JDialog(Ventana.ventana, "Configuracion", true);
                 ImageIcon im = new ImageIcon("src/main/resources/images/launcher/icono.png");
                 d.setIconImage(im.getImage());
                 d.add(men);

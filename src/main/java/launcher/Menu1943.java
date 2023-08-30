@@ -48,7 +48,7 @@ public class Menu1943 extends JPanel implements ActionListener {
             c.gridy = i;
             d.gridy = i;
             if (i == 5) {
-                JLabel aux = new JLabel("Definición de teclas");
+                JLabel aux = new JLabel("Definicion de teclas");
                 aux.setFont(new Font("Arial", Font.PLAIN, 12));
                 aux.setForeground(new Color(200, 200, 200));
                 this.add(aux, e);
@@ -163,10 +163,10 @@ public class Menu1943 extends JPanel implements ActionListener {
             "Sonido General",
             "Efectos de sonido",
             "Musica de fondo",
-            "Activar y Desactivar efectos de sonido", "Activar y Desactivar música de fondo", "Pausar y Reanudar juego",
+            "Activar y Desactivar efectos de sonido", "Activar y Desactivar musica de fondo", "Pausar y Reanudar juego",
             "Izquierda", "Derecha", "Arriba", "Abajo", "Disparo", "Ataque Especial", "Inicia el juego",
-            "Selección de pista musical",
-            "Selección de personaje",
+            "Seleccion de pista musical",
+            "Seleccion de personaje",
             "Modo de pantalla",
     };
 }
