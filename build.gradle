@@ -4,7 +4,6 @@ plugins {
 }
 
 version = '1.0.0'
-//mainClassName = 'juego0.core.J1943'
 
 application {
     // Otras configuraciones de la aplicacion
@@ -17,7 +16,5 @@ repositories {
 
 dependencies {
 	implementation 'com.googlecode.json-simple:json-simple:1.1.1'    
-        implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
-
-
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
 }

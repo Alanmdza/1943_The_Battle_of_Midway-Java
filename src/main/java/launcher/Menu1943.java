@@ -107,7 +107,7 @@ public class Menu1943 extends JPanel implements ActionListener {
             }
         }
     }
-
+    @SuppressWarnings("unchecked")
     private static void saveConfig() {
         JSONObject configJson = new JSONObject();
         for (int i = 0; i < 16; i++) {
