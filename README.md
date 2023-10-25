@@ -114,6 +114,4 @@ Enjoy the nostalgic experience of "1943: La Batalla de Midway" and relive the cl
 
 ![nivel0](https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/blob/main/src/main/resources/images/1984/Nivel0.png)
 
-https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/blob/main/src/main/resources/images/1984/Nivel0.png
-
 
