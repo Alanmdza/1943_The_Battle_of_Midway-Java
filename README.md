@@ -114,6 +114,6 @@ To get started with the game, follow these steps:
 
 Enjoy the nostalgic experience of "1943: La Batalla de Midway" and relive the classic NES gameplay in a Java environment.
 
-![nivel0](https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/blob/main/src/main/resources/images/1984/Nivel0.png)
+![image](https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/assets/126357766/f683cb53-62e5-437d-a837-2891cafdf8ba)
 
 
