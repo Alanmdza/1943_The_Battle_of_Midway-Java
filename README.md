@@ -98,10 +98,11 @@ The game should save all obtained scores and display only the top 10. These shou
 - Date
 
 ### Optional Features
-![image](https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/assets/126357766/57d014c8-034e-4e54-8335-1f6ed76cb5ec)
 
 1. Hidden items that are uncovered by shooting a specific section of the screen. Collecting them allows the player to advance to the next level.
 2. The player's plane can perform a "loop" (using the combination of keys X + Z), during which it can dodge enemies and their bullets.
+3. 
+![image](https://github.com/Alanmdza/1943_The_Battle_of_Midway-Java/assets/126357766/57d014c8-034e-4e54-8335-1f6ed76cb5ec)
 
 ## Getting Started
 
